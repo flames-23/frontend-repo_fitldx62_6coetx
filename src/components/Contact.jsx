@@ -1,5 +1,6 @@
 import { Mail, Send } from 'lucide-react';
 import { useState } from 'react';
+import Tilt3D from './Tilt3D';
 
 export default function Contact() {
   const [status, setStatus] = useState('');
@@ -38,24 +39,26 @@ export default function Contact() {
           </div>
         </div>
 
-        <form onSubmit={submit} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 space-y-4">
-          <div>
-            <label className="block text-sm text-white/70">Name</label>
-            <input name="name" required className="mt-1 w-full rounded-md bg-black/40 border border-white/10 px-3 py-2 outline-none focus:ring-2 ring-cyan-400/50 text-white" />
-          </div>
-          <div>
-            <label className="block text-sm text-white/70">Email</label>
-            <input name="email" type="email" required className="mt-1 w-full rounded-md bg-black/40 border border-white/10 px-3 py-2 outline-none focus:ring-2 ring-cyan-400/50 text-white" />
-          </div>
-          <div>
-            <label className="block text-sm text-white/70">Message</label>
-            <textarea name="message" required rows="4" className="mt-1 w-full rounded-md bg-black/40 border border-white/10 px-3 py-2 outline-none focus:ring-2 ring-cyan-400/50 text-white" />
-          </div>
-          <button className="inline-flex items-center gap-2 rounded-lg bg-cyan-500/90 hover:bg-cyan-400 text-black font-semibold px-4 py-2 transition-colors">
-            Send <Send size={16} />
-          </button>
-          <p className="text-sm text-white/70">{status}</p>
-        </form>
+        <Tilt3D className="rounded-2xl">
+          <form onSubmit={submit} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 space-y-4">
+            <div>
+              <label className="block text-sm text-white/70">Name</label>
+              <input name="name" required className="mt-1 w-full rounded-md bg-black/40 border border-white/10 px-3 py-2 outline-none focus:ring-2 ring-cyan-400/50 text-white" />
+            </div>
+            <div>
+              <label className="block text-sm text-white/70">Email</label>
+              <input name="email" type="email" required className="mt-1 w-full rounded-md bg-black/40 border border-white/10 px-3 py-2 outline-none focus:ring-2 ring-cyan-400/50 text-white" />
+            </div>
+            <div>
+              <label className="block text-sm text-white/70">Message</label>
+              <textarea name="message" required rows="4" className="mt-1 w-full rounded-md bg-black/40 border border-white/10 px-3 py-2 outline-none focus:ring-2 ring-cyan-400/50 text-white" />
+            </div>
+            <button className="inline-flex items-center gap-2 rounded-lg bg-cyan-500/90 hover:bg-cyan-400 text-black font-semibold px-4 py-2 transition-colors">
+              Send <Send size={16} />
+            </button>
+            <p className="text-sm text-white/70">{status}</p>
+          </form>
+        </Tilt3D>
       </div>
     </section>
   );

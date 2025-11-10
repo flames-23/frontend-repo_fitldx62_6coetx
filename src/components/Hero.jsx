@@ -1,5 +1,6 @@
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
+import Stars from './Stars';
 
 export default function Hero() {
   return (
@@ -8,6 +9,7 @@ export default function Hero() {
         <Spline scene="https://prod.spline.design/pDXeCthqjmzYX5Zk/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
+      <Stars density={0.0007} speed={0.2} className="opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-[#070B13] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16">
